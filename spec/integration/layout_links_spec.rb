@@ -6,6 +6,11 @@ describe "LayoutLinks" do
     response.should render_template('pages/home')
   end
 
+  it "should have a Signup page at '/signup'" do
+    get '/signup'
+    response.should render_template('users/new')
+  end
+
   it "should have a Contact page at '/contact'" do
     get '/contact'
     response.should render_template('pages/contact')
